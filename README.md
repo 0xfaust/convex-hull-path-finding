@@ -17,7 +17,7 @@ Design of Algorithm
 Once the convex hull of each polygon on the map was found (described in the Implementation Design section below) I wanted to create a medium for a shortest path algorithm such as Dijkstra’s or A* to run. Initially I thought of creating a large grid with the polygons being set to null and running the algorithm over that but I did not think that it would be computationally efficient (or memory efficient), also the route would only be as optimal as the size I made the cells (the smaller the better). I knew that in 2D Euclidean Space the shortest path between two points is a straight line so I decided to use a visibility graph.
 
 <p align="center">
-<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example1.png">
+<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example1.png"><br>
 <i>Visibility Graph showing the ‘Lines of Sight’ between 3 Polygons, a Start Point and an End Point. Black Lines are Visibility Graph ‘Edges’, the Red Points are the Visibility Graph ‘Vertices’ and the Red Lines are the Polygons.  
 [TEST-MAP-1.TXT]</i>
 </p>
@@ -44,7 +44,7 @@ The intersections are checked using a method I wrote named lineOfSight() that ta
 *‘Djikstra's algorithm solves the problem of finding the shortest path from a point in a graph (the source) to a destination. It turns out that one can find the shortest paths from a given source to all points in a graph in the same time, hence this problem is sometimes called the single-source shortest paths problem.’*
 
 <p align="center">
-<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example2.png">
+<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example2.png"><br>
 <i>Shortest Path between 3 Polygons from a Start Point to an End Point calculated using Dijkstra’s Algorithm. Black Lines are Visibility Graph ‘Edges’, the Red Points are the Visibility Graph ‘Vertices’, the thin Red Lines are the Polygons and the thick Red Line is the Shortest Path.
 [TEST-MAP-1.TXT]</i>
 </p>
@@ -104,7 +104,7 @@ Implementation Design:
 The first part of this assignment was to find the convex hull of every polygon on a provided map. This would ensure that the rest of the path finding procedure runs as efficiently as possible as the shortest path around an object will always be around its convex hull.
 
 <p align="center">
-<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example9.png">
+<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example9.png"><br>
 <i>Convex Hulls of 3 Polygons, Black Points are Hull Points, Red Points are Discarded Points, Red Lines are Edges between Hull Points and Black Lines show the Points sorted by Polar Angle. [TEST-MAP-1.TXT]</i>
 </p>
 
@@ -140,7 +140,7 @@ Algorithm Analysis:</h3>
 Each aspect of this program has a different computational complexity and contributes differently to the overall complexity of the program. Below I have made a table comparing the input size (number of points) and the execution time. A large portion of the execution time is due to StdDraw but I decided to leave the animations as it was consistent across all of the maps so shouldn’t provide an unfair advantage or disadvantage. I have also run the code on each map file 3 times and taken the average to avoid CPU/RAM spikes.
 
 <p align="center">
-<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example10.png">
+<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example10.png"><br>
 <i>This is the specifications of the laptop I am executing the code on.</i>
 </p>
 
@@ -154,7 +154,7 @@ Each aspect of this program has a different computational complexity and contrib
 | DEMO-MAP-3.TXT      | 461            | 6647                |
 
 <p align="center">
-<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example11.png">
+<img src="https://github.com/AlbertFaust/convex-hull-path-finding/blob/master/images/example11.png"><br>
 <i>Plot of the Results Based on Loop Map Files
 </i>
 </p>
